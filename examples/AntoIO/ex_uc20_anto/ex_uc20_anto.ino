@@ -1,10 +1,7 @@
 #include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
 #include "internet.h"
 #include "uc_anto.h"
-#include "DHT.h"
-AltSoftSerial mySerial;
+
 INTERNET net;
 UCxANTO anto;
 
@@ -23,11 +20,6 @@ UCxANTO anto;
 unsigned long previousMillis = 0;
 const long interval = 2000;
 
-#define LEDPIN 10
-#define DHTPIN 2   
-#define DHTTYPE DHT22    
-DHT dht(DHTPIN, DHTTYPE);
-
 
 void debug(String data)
 {
@@ -38,8 +30,8 @@ void setup()
 {
   pinMode(LEDPIN,OUTPUT);
   digitalWrite(LEDPIN,HIGH);
-  Serial.begin(9600);
-  gsm.begin(&mySerial,9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2,115200);
   dht.begin();
   gsm.Event_debug = debug;
   Serial.println(F("UC20"));
@@ -72,8 +64,8 @@ void loop()
   {  
     previousMillis = currentMillis;
     Serial.println("Publish");
-    float h = dht.readHumidity();
-    float t = dht.readTemperature();
+    float h = random(0,100);
+    float t = random(0,60);
     anto.pub("Humi",h);
     anto.pub("Temp",t);
   }
