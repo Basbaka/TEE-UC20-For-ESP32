@@ -1,5 +1,5 @@
-#include "call.h"
-#include "TEE_UC20.h"
+#include "esp32_call.h"
+#include "esp32_TEE_UC20.h"
 
 CALL:: CALL(){}
 
