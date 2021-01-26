@@ -1,4 +1,4 @@
-#include "firebase.h"
+#include "esp32_firebase.h"
 
 SSL fb_ssl;
 unsigned char flag_error=1; 
