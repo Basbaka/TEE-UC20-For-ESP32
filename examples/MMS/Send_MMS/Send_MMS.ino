@@ -1,6 +1,4 @@
 #include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
 #include "internet.h"
 #include "File.h"
 #include "mms.h"
@@ -25,18 +23,15 @@ File myFile;
 #define PROXY "10.4.7.39"
 #define PORT  "8080"
 
-//SoftwareSerial mySerial(8, 9); // RX, TX
-AltSoftSerial mySerial;
-
 void debug(String data)
 {
   Serial.println(data);
 }
 void setup() 
 {
-  Serial.begin(9600);
+  Serial.begin(115200);
   file.begin();
-  gsm.begin(&mySerial,9600);
+  gsm.begin(&Serial2,115200);
   delay(3000);
   Serial.println(F("Start"));
   gsm.Event_debug = debug;
