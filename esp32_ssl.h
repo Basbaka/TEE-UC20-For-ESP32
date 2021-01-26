@@ -1,7 +1,7 @@
 #ifndef SSL_h
 #define SSL_h
 
-#include "TEE_UC20.h"
+#include "esp32_TEE_UC20.h"
 
 
 class SSL
