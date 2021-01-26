@@ -1,7 +1,7 @@
-#include "TEE_UC20.h"
-#include "internet.h"
-#include "firebase.h"
-#include "gnss.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_internet.h"
+#include "esp32_firebase.h"
+#include "esp32_gnss.h"
 
 INTERNET net;
 FIREBASE firebase;
