@@ -1,7 +1,7 @@
-#include "TEE_UC20.h"
-#include "internet.h"
-#include "File.h"
-#include "mms.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_internet.h"
+#include "esp32_File.h"
+#include "esp32_mms.h"
 #include <SPI.h>
 #include <SD.h>
 
