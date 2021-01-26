@@ -1,6 +1,6 @@
-#include "TEE_UC20.h"
-#include "call.h"
-#include "sms.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_call.h"
+#include "esp32_sms.h"
 CALL call;
 SMS sms;
 
