@@ -1,6 +1,6 @@
-#include "TEE_UC20.h"
-#include "internet.h"
-#include "uc_anto.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_internet.h"
+#include "esp32_uc_anto.h"
 
 INTERNET net;
 UCxANTO anto;
