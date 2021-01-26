@@ -1,7 +1,7 @@
 #ifndef MMS_h
 #define MMS_h
 
-#include "TEE_UC20.h"
+#include "esp32_TEE_UC20.h"
 
 
 class MMS
