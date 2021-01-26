@@ -1,6 +1,4 @@
 #include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
 #include "call.h"
 #include "sms.h"
 #include "internet.h"
@@ -14,17 +12,14 @@ INTERNET net;
 UC_FILE file;
 File myFile;
 
-//SoftwareSerial mySerial(8, 9); // RX, TX
-AltSoftSerial mySerial;
-
 void debug(String data)
 {
   Serial.println(data);
 }
 void setup() 
 {
-  Serial.begin(9600);
-  gsm.begin(&mySerial,9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2,115200);
   delay(3000);
   Serial.println("Start");
   gsm.Event_debug = debug;
