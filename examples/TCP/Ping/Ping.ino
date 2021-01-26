@@ -1,6 +1,6 @@
-#include "TEE_UC20.h"
-#include "internet.h"
-#include "tcp.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_internet.h"
+#include "esp32_tcp.h"
 
 INTERNET net;
 TCP tcp;
