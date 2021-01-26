@@ -1,8 +1,8 @@
 #ifndef LINE_NOTIFY_h
 #define LINE_NOTIFY_h
 
-#include "TEE_UC20.h"
-#include "ssl.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_ssl.h"
 
 #define CONTEX 1
 #define CLI_ID 4
