@@ -1,5 +1,5 @@
 3G HAT Expansion for Raspberry Pi (UC20-G) with ESPino32 
-Libraly and Example code Quectel UC20 3G  for ESP32 Board.
+Library and Example code Quectel UC20 3G  for ESP32 Board.
 
 Doucument
 - 3G_Shield_User_Manual(TH) (https://github.com/ThaiEasyElec/TEE_UC20_Shield/blob/master/3G%20Shield%20manual/ETEE059_3G_Shield_User_Manual_TH_20160321.pdf)
