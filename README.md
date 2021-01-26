@@ -28,11 +28,12 @@ installation :
 
 
 
-5. ทำการตั้งค่า URC Port ให้ออกทาง UART โดยใชคำสั่ง AT+QURCCFG="urcport","uart1" จากนั้นตัวโมดูลจะตอบกลับมาว่า OK ซึ่งหมายถึงได้ทำการเปลี่ยนให้ URC Port ออกทาง UART แล้ว
+4. ทำการตั้งค่า URC Port ให้ออกทาง UART โดยใชคำสั่ง AT+QURCCFG="urcport","uart1" จากนั้นตัวโมดูลจะตอบกลับมาว่า OK ซึ่งหมายถึงได้ทำการเปลี่ยนให้ URC Port ออกทาง UART แล้ว
 
 ![image](https://user-images.githubusercontent.com/8803501/105678007-356ea280-5f1f-11eb-81a1-211707cd2b70.png)
 
 
-6. ทำการทดสอบโดยรันโปรแกรม NTP ไปที่ เมนู File >> Examples >> TEE-UC20-For-ESP32 >> TCP >> NTP จากนั้นทำการอัพโหลด และติดตามผลการเชื่อมต่อ NTP server เป็นอันเรียบร้อย 
+
+5. ทำการทดสอบโดยรันโปรแกรม NTP ไปที่ เมนู File >> Examples >> TEE-UC20-For-ESP32 >> TCP >> NTP จากนั้นทำการอัพโหลด และติดตามผลการเชื่อมต่อ NTP server เป็นอันเรียบร้อย 
 
 ![image](https://user-images.githubusercontent.com/8803501/105677213-29ceac00-5f1e-11eb-93da-9d94ae7a927d.png)
