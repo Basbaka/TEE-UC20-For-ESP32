@@ -1,8 +1,8 @@
-#include "TEE_UC20.h"
-#include "call.h"
-#include "sms.h"
-#include "internet.h"
-#include "File.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_call.h"
+#include "esp32_sms.h"
+#include "esp32_internet.h"
+#include "esp32_File.h"
 #include <SPI.h>
 #include <SD.h>
 #define SD_CS 5
