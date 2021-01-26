@@ -1,5 +1,5 @@
-#include "uc_mqtt.h"
-#include "tcp.h"
+#include "esp32_uc_mqtt.h"
+#include "esp32_tcp.h"
 TCP tcp_mqtt;
 bool connected = false;
 unsigned int len_buffer_in_module = 0;
