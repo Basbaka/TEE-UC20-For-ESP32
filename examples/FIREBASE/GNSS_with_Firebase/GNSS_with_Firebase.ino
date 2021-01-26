@@ -1,5 +1,4 @@
 #include "TEE_UC20.h"
-#include <AltSoftSerial.h>
 #include "internet.h"
 #include "firebase.h"
 #include "gnss.h"
@@ -20,8 +19,6 @@ FIREBASE firebase;
 GNSS gps;
 unsigned long previousMillis = 0;
 const long interval = 2000;
-
-AltSoftSerial mySerial;
 
 void debug(String data)
 {
@@ -54,8 +51,8 @@ void setup()
 {
   pinMode(LED, OUTPUT);
   digitalWrite(LED, HIGH);
-  Serial.begin(9600);
-  gsm.begin(&mySerial, 9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2, 115200);
   gsm.Event_debug = debug;
   Serial.println(F("UC20"));
   gsm.PowerOn();
