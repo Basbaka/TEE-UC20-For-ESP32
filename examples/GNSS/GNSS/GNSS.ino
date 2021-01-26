@@ -1,5 +1,5 @@
-#include "TEE_UC20.h"
-#include "gnss.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_gnss.h"
 GNSS gps;
 
 void debug(String data)
