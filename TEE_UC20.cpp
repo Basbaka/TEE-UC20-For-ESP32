@@ -1,6 +1,6 @@
 #include "TEE_UC20.h"
 
-int START_PIN = 4;
+int START_PIN = 26;
 UC20 gsm;
 unsigned long previousMillis_timeout = 0; 
 
@@ -11,24 +11,14 @@ UC20::UC20()
 {
 	Event_debug =  event_null;
 }
-void UC20:: begin(SoftwareSerial *serial,long baud)
-{
-	serial->begin(baud);
-	_Serial = serial;	
-}
+
 
 void UC20:: begin(HardwareSerial *serial,long baud)
 {
 	serial->begin(baud);
 	_Serial = serial;
 }
-#if ATLSOFTSERIAL 
-void UC20:: begin(AltSoftSerial *serial,long baud)
-{
-	serial->begin(baud);
-	_Serial = serial;
-}
-#endif
+
 void UC20:: debug (String data)
 {
 	(*Event_debug)(data);
