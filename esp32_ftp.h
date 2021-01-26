@@ -1,7 +1,7 @@
 #ifndef FTP_h
 #define FTP_h
 
-#include "TEE_UC20.h"
+#include "esp32_TEE_UC20.h"
 
 #define ASCII  0
 #define BINARY 1
