@@ -1,6 +1,4 @@
 #include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
 #include "call.h"
 #include "sms.h"
 #include "internet.h"
@@ -16,9 +14,6 @@ HTTP http;
 #define USER "True"
 #define PASS "true"
 
-//SoftwareSerial mySerial(2, 3); // RX, TX
-AltSoftSerial mySerial;
-
 void debug(String data)
 {
   Serial.println(data);
@@ -29,8 +24,8 @@ void data_out(char data)
 }
 void setup() 
 {
-  Serial.begin(9600);
-  gsm.begin(&mySerial,9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2,115200);
   gsm.Event_debug = debug;
   Serial.println(F("UC20"));
   gsm.PowerOn(); 
