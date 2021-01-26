@@ -1,6 +1,4 @@
 #include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
 #include "internet.h"
 #include "tcp.h"
 #include <TimeLib.h> // Download TimeLib Library from https://github.com/PaulStoffregen/Time
@@ -15,8 +13,6 @@ TCP tcp;
 
 tmElements_t my_time;  // time elements structure
 time_t unix_timestamp; // a timestamp
-
-AltSoftSerial mySerial;
 
 void debug(String data)
 {
@@ -42,8 +38,8 @@ String getValue(String data, char separator, int index)
 
 void setup()
 {
-  Serial.begin(9600);
-  gsm.begin(&mySerial, 9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2, 115200);
   gsm.Event_debug = debug;
   Serial.println(F("UC20"));
   gsm.PowerOn();
