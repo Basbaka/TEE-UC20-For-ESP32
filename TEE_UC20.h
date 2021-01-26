@@ -1,14 +1,8 @@
 #ifndef UC20_h
 #define UC20_h
 
-#define ATLSOFTSERIAL 1
-
 #include <Arduino.h>
 #include <Stream.h>
-#include <SoftwareSerial.h>
-#if ATLSOFTSERIAL 
-	#include "AltSoftSerial.h"
-#endif
 
 #define EVENT_NULL	0
 #define EVENT_RING	1
@@ -20,11 +14,7 @@ class UC20
 {
 public:
 	UC20();
-	void begin(SoftwareSerial *serial,long baud);	
 	void begin(HardwareSerial *serial,long baud);
-	#if ATLSOFTSERIAL 
-	void begin(AltSoftSerial *serial,long baud);
-	#endif
 	void (*Event_debug)(String data);
 	void debug (String data);
 	void SetPowerKeyPin(int pin);
