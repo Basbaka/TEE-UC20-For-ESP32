@@ -1,6 +1,4 @@
 #include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
 #include "internet.h"
 #include "LineNotify.h"
 
@@ -13,7 +11,7 @@ LINE_NOTIFY line;
 
 #define Authen  "Your Token" 
 
-AltSoftSerial mySerial;
+
 
 void debug(String data)
 {
@@ -23,8 +21,8 @@ void debug(String data)
 void setup() 
 {  
   pinMode(Button,INPUT);
-  Serial.begin(9600);
-  gsm.begin(&mySerial,9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2,115200);
   gsm.Event_debug = debug;
   Serial.println(F("UC20"));
   gsm.PowerOn(); 
