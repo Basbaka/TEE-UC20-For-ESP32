@@ -1,7 +1,7 @@
 #ifndef uc_anto_h
 #define uc_anto_h
 
-#include "TEE_UC20.h"
+#include "esp32_TEE_UC20.h"
 
 #define ANTO_SERVER      "service.anto.io"
 #define ANTO_PORT        "1883"
