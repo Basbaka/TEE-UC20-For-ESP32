@@ -1,11 +1,7 @@
 #include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
 #include "gnss.h"
 GNSS gps;
 
-//SoftwareSerial mySerial(8, 9); // RX, TX
-AltSoftSerial mySerial;
 void debug(String data)
 {
   Serial.println(data);
@@ -34,8 +30,8 @@ String getValue(String data, char separator, int index)
 
 void setup() 
 {
-  Serial.begin(9600);
-  gsm.begin(&mySerial,9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2,115200);
   gsm.Event_debug = debug;
   Serial.println(F("UC20"));
   gsm.PowerOn(); 
