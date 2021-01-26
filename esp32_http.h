@@ -1,8 +1,8 @@
 #ifndef HTTP_h
 #define HTTP_h
 
-#include "TEE_UC20.h"
-#include "ssl.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_ssl.h"
 #define CONTEX 1
 
 class HTTP
