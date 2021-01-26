@@ -1,8 +1,6 @@
-#include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
-#include "internet.h"
-#include "tcp.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_internet.h"
+#include "esp32_tcp.h"
 
 INTERNET net;
 TCP tcp;
@@ -12,7 +10,6 @@ TCP tcp;
 #define USER ""
 #define PASS ""
 
-AltSoftSerial mySerial;
 
 void debug(String data)
 {
@@ -20,8 +17,8 @@ void debug(String data)
 }
 void setup() 
 {
-  Serial.begin(9600);
-  gsm.begin(&mySerial,9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2,115200);
   gsm.Event_debug = debug;
   Serial.println(F("UC20"));
   gsm.PowerOn(); 
