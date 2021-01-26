@@ -1,11 +1,7 @@
 #include "TEE_UC20.h"
-#include "SoftwareSerial.h"
-#include <AltSoftSerial.h>
 #include "File.h"
 UC_FILE file;
 
-//SoftwareSerial mySerial(8, 9); // RX, TX
-AltSoftSerial mySerial;
 String File_name = "test123.txt";
 
 void debug(String data)
@@ -19,8 +15,8 @@ void data_out(char data)
 
 void setup() 
 {
-  Serial.begin(9600);
-  gsm.begin(&mySerial,9600);
+  Serial.begin(115200);
+  gsm.begin(&Serial2,115200);
   delay(3000);
   Serial.println("Start");
   gsm.Event_debug = debug;
