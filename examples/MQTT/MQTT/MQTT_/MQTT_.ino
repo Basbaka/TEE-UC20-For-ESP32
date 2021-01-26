@@ -94,8 +94,9 @@ void loop()
       mqtt.Publish("ctrl","thaieasyelec");
   }  
   mqtt.MqttLoop();
+  /*
   if(!mqtt.ConnectState())
      connect_server();
-  
+  */
 }
 
