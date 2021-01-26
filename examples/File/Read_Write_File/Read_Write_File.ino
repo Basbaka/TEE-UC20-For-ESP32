@@ -1,5 +1,5 @@
-#include "TEE_UC20.h"
-#include "File.h"
+#include "esp32_TEE_UC20.h"
+#include "esp32_File.h"
 UC_FILE file;
 
 String File_name = "test123.txt";
